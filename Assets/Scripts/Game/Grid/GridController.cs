@@ -21,7 +21,19 @@ namespace Game.Grid
 
         public void StartLevel(CardData[] cards, int rows, int rightCardI, Action onGuessedRight, bool animate = false)
         {
-            InitializeLevel(cards, rows, rightCardI, onGuessedRight, animate);
+            ClearSlots();
+
+            _rightCardI = rightCardI;
+            _gridLayoutGroup.constraintCount = rows;
+
+            for (int i = 0; i < cards.Length; i++)
+            {
+                var slot = CreateSlot();
+                bool isRight = i == _rightCardI;
+                Action guessAction = isRight ? onGuessedRight : null;
+
+                slot.Init(cards[i].CardVisual, guessAction, isRight, animate);
+            }
         }
 
         public void DisableSlots()
@@ -42,34 +54,12 @@ namespace Game.Grid
             return _currentSlots[_rightCardI].transform.position;
         }
 
-        private void InitializeLevel(CardData[] cards, int rows, int rightCardI, Action onGuessedRight, bool animate)
-        {
-            ClearSlots();
-
-            _rightCardI = rightCardI;
-            _gridLayoutGroup.constraintCount = rows;
-
-            for (int i = 0; i < cards.Length; i++)
-            {
-                var slot = CreateSlot();
-                bool isRight = i == _rightCardI;
-                Action guessAction = isRight ? onGuessedRight : null;
-
-                InitializeSlot(slot, cards[i], guessAction, isRight, animate);
-            }
-        }
-
         private Slot CreateSlot()
         {
             var slot = Instantiate(_slotPrefab, _slotsParent);
             _currentSlots.Add(slot);
 
             return slot;
-        }
-
-        private void InitializeSlot(Slot slot, CardData card, Action guessAction, bool isRight, bool animate)
-        {
-            slot.Init(card.CardVisual, guessAction, isRight, animate);
         }
 
         private void ClearSlots()

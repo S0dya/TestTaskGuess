@@ -73,22 +73,33 @@ namespace Game
 
         private void StartLevel(LevelData levelData)
         {
-            int elementsAmount = GetElementsAmount(levelData);
-            var cards = GetShuffledCards(levelData);
-            var unusedCards = FilterUnusedCards(cards);
-            var rightCard = SelectRightCard(unusedCards);
-            int rightCardI = PlaceRightCard(cards, rightCard, elementsAmount);
-            var resizedCards = ResizeCards(cards, elementsAmount);
+            GetCardsData(levelData, out CardData[] cards, out int rightCardI, out string rightCardIdentifier);
 
             bool animate = _levelIndex == 0;
 
-            StartGridLevel(resizedCards, rightCardI, animate);
-            SetTaskDescription(rightCard, animate);
+            _gridController.StartLevel(
+                cards,
+                _levelData.Rows,
+                rightCardI,
+                OnGuessedRight,
+                animate);
+            _uiTaskDescriptionController.SetDescription(rightCardIdentifier, animate);
         }
 
-        private int GetElementsAmount(LevelData levelData)
+        private void GetCardsData(LevelData levelData,
+            out CardData[] cards, out int rightCardI, out string rightCardIdentifier)
         {
-            return levelData.Rows * (_levelIndex + 1);
+            int elementsAmount = levelData.Rows * (_levelIndex + 1);
+            
+            cards = GetShuffledCards(levelData);
+            var unusedCards = GetFilterUnusedCards(cards);
+
+            var rightCard = Helper.GetRandomElement(unusedCards);
+            rightCardIdentifier = rightCard.Identifier;
+            _usedIdentifiers.Add(rightCardIdentifier);
+            
+            rightCardI = PlaceRightCard(cards, rightCard, elementsAmount);
+            cards = cards.Take(elementsAmount).ToArray();
         }
 
         private CardData[] GetShuffledCards(LevelData levelData)
@@ -100,17 +111,9 @@ namespace Game
             return cards;
         }
 
-        private CardData[] FilterUnusedCards(CardData[] cards)
+        private CardData[] GetFilterUnusedCards(CardData[] cards)
         {
             return cards.Where(x => !_usedIdentifiers.Contains(x.Identifier)).ToArray();
-        }
-
-        private CardData SelectRightCard(CardData[] unusedCards)
-        {
-            var rightCard = Helper.GetRandomElement(unusedCards);
-            _usedIdentifiers.Add(rightCard.Identifier);
-
-            return rightCard;
         }
 
         private int PlaceRightCard(CardData[] cards, CardData rightCard, int elementsAmount)
@@ -120,30 +123,11 @@ namespace Game
             if (rightCardI >= elementsAmount)
             {
                 rightCardI = Helper.GetRandomNextInt(elementsAmount);
+
                 cards[rightCardI] = rightCard;
             }
 
             return rightCardI;
-        }
-
-        private CardData[] ResizeCards(CardData[] cards, int elementsAmount)
-        {
-            return cards.Take(elementsAmount).ToArray();
-        }
-
-        private void StartGridLevel(CardData[] resizedCards, int rightCardI, bool animate)
-        {
-            _gridController.StartLevel(
-                resizedCards,
-                _levelData.Rows,
-                rightCardI,
-                OnGuessedRight,
-                animate);
-        }
-
-        private void SetTaskDescription(CardData rightCard, bool animate)
-        {
-            _uiTaskDescriptionController.SetDescription(rightCard.Identifier, animate);
         }
     }
 }
