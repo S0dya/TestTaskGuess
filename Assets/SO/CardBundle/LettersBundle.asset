@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a68cadc6bc75f54687d686c2db5f1dd, type: 3}
+  m_Name: LettersBundle
+  m_EditorClassIdentifier: 
+  _cardsData:
+  - _identifier: A
+    _cardVisual:
+      _sprite: {fileID: 4963718625464178563, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: B
+    _cardVisual:
+      _sprite: {fileID: 7783457984840754399, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: C
+    _cardVisual:
+      _sprite: {fileID: 3234300448368640894, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: D
+    _cardVisual:
+      _sprite: {fileID: 7911670913450602933, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: F
+    _cardVisual:
+      _sprite: {fileID: -6426668015567183463, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: G
+    _cardVisual:
+      _sprite: {fileID: 216406037199867053, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: J
+    _cardVisual:
+      _sprite: {fileID: -2756605603065543306, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: I
+    _cardVisual:
+      _sprite: {fileID: -3541686595128163680, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: E
+    _cardVisual:
+      _sprite: {fileID: 4652326554734856401, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: H
+    _cardVisual:
+      _sprite: {fileID: -8235857483100294123, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: K
+    _cardVisual:
+      _sprite: {fileID: -1127063002332224934, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: L
+    _cardVisual:
+      _sprite: {fileID: -5901097786099144959, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: M
+    _cardVisual:
+      _sprite: {fileID: 3295844289267200183, guid: 1244d7d6b29e0cc489f2a40a9a25328a, type: 3}
+      _rotates: 0
+  - _identifier: R
+    _cardVisual:
+      _sprite: {fileID: -6342808464625005154, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: S
+    _cardVisual:
+      _sprite: {fileID: 8083504644574312765, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: U
+    _cardVisual:
+      _sprite: {fileID: 3270655726746431581, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: V
+    _cardVisual:
+      _sprite: {fileID: -2983290644488427326, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: O
+    _cardVisual:
+      _sprite: {fileID: 5433449995169814141, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: Q
+    _cardVisual:
+      _sprite: {fileID: -4447791616812998045, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: W
+    _cardVisual:
+      _sprite: {fileID: -9165466868132007793, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: T
+    _cardVisual:
+      _sprite: {fileID: -4461999128152558772, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: N
+    _cardVisual:
+      _sprite: {fileID: 7112752472869403061, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: P
+    _cardVisual:
+      _sprite: {fileID: -4252152113809563852, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: X
+    _cardVisual:
+      _sprite: {fileID: 4461586319009975920, guid: fb56fc2164164924487c0e8dd07fbca9, type: 3}
+      _rotates: 0
+  - _identifier: Y
+    _cardVisual:
+      _sprite: {fileID: -5001085640463096552, guid: eb748509643698c4aa48f64285eb166a, type: 3}
+      _rotates: 0
+  - _identifier: Z
+    _cardVisual:
+      _sprite: {fileID: 3539555106843919260, guid: eb748509643698c4aa48f64285eb166a, type: 3}
+      _rotates: 0

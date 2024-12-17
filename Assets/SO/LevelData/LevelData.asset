@@ -16,3 +16,4 @@ MonoBehaviour:
   _levelsAmount: 3
   _cardBundlesData:
   - {fileID: 11400000, guid: 49e15adea1ebcbc4b852a063d2b14e3c, type: 2}
+  - {fileID: 11400000, guid: cb02f67595d184446b91a568ab280da4, type: 2}

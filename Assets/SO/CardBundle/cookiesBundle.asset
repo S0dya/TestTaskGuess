@@ -10,26 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a68cadc6bc75f54687d686c2db5f1dd, type: 3}
-  m_Name: cookiesBundle
+  m_Name: CookiesBundle
   m_EditorClassIdentifier: 
   _cardsData:
   - _identifier: 1
-    _sprite: {fileID: 1422184923334757970, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: 1422184923334757970, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
   - _identifier: 2
-    _sprite: {fileID: 1808195818850983521, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: 1808195818850983521, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
   - _identifier: 3
-    _sprite: {fileID: -7900951133411543555, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
-  - _identifier: 4
-    _sprite: {fileID: -7398325283844340781, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: -7900951133411543555, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
   - _identifier: 5
-    _sprite: {fileID: 2267071060405275165, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: -7398325283844340781, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
+  - _identifier: 4
+    _cardVisual:
+      _sprite: {fileID: 2267071060405275165, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
   - _identifier: 6
-    _sprite: {fileID: -7015292045520539579, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: -7015292045520539579, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 0
   - _identifier: 7
-    _sprite: {fileID: -675344402919758444, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: -675344402919758444, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 1
   - _identifier: 8
-    _sprite: {fileID: 3547489320769246608, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+    _cardVisual:
+      _sprite: {fileID: 3547489320769246608, guid: a195e0bae6aa1c34098ff637e72af3a8, type: 3}
+      _rotates: 1
   - _identifier: 9
-    _sprite: {fileID: 21300000, guid: c30012e411ca3b741a2ca4436621752d, type: 3}
+    _cardVisual:
+      _sprite: {fileID: -1155199509967091035, guid: c30012e411ca3b741a2ca4436621752d, type: 3}
+      _rotates: 0
   - _identifier: 10
-    _sprite: {fileID: 21300000, guid: 18098a45c83ee4845bb8562c6729bcde, type: 3}
+    _cardVisual:
+      _sprite: {fileID: 4142021021139464533, guid: 18098a45c83ee4845bb8562c6729bcde, type: 3}
+      _rotates: 0

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public static class Helper
@@ -16,5 +17,12 @@ public static class Helper
 
     public static int GetRandomNextInt(int max) => Random.Range(0, max);
     public static T GetRandomElement<T>(T[] elements) => elements[GetRandomNextInt(elements.Length)];
+
+    public static async Task WaitInSeconds(float value)
+    {
+        int milliseconds = Mathf.RoundToInt(value * 1000f);
+
+        await Task.Delay(milliseconds);
+    }
 
 }

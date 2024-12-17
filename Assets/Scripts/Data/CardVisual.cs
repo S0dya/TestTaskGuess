@@ -2,15 +2,15 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class CardData 
+public class CardVisual
 {
-    [SerializeField]
-    private string _identifier;
-
     [SerializeField]
     private Sprite _sprite;
 
-    public string Identifier => _identifier;
+    [SerializeField]
+    private bool _rotates;
 
     public Sprite Sprite => _sprite;
+
+    public bool Rotates => _rotates;
 }
